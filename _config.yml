@@ -1,9 +1,9 @@
 # Book settings
 # Learn more at https://jupyterbook.org/customize/config.html
 
-title: My sample book
-author: The Jupyter Book Community
-logo: nyc.png
+title: Urban Data Science Handbook
+author: A.C. Shannon-Ding
+logo: images/general/nyc.png
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html
@@ -30,7 +30,21 @@ repository:
 html:
   use_issues_button: true
   use_repository_button: true
+  extra_css:
+    - _static/tufte.css
+  home_page_in_navbar: true
+  use_edit_page_button: true
+  favicon: images/general/city2.png
+  use_fullscreen_button: false
+  comments:
+    hypothesis: false
+
 
 sphinx:
+  extra_extensions:
+  - sphinxext.opengraph
   config:
-    html_theme: sphinx_book_theme
+    ogp_site_url: "https://goodresearch.dev/"
+    ogp_image: "https://goodresearch.dev/_images/unicorn.png"
+    ogp_description_length: 200
+    # html_theme: sphinx_book_theme
